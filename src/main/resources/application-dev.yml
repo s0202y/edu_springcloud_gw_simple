@@ -19,13 +19,13 @@ spring:
     gateway:
       routes:
         - id: nginx-service
-          uri: http://nginx.edu25.svc.cluster.local
+          uri: http://google.com
           predicates:
             - Path=/nginx/**
           filters:
             - RewritePath=/nginx/?(?<path>.*),/$\{path}
         - id: httpd-service
-          uri: http://httpd.edu25.svc.cluster.local
+          uri: http://daum.net
           predicates:
             - Path=/httpd/**
           filters:
